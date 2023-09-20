@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<script src="index.js" defer></script>
+<body>
+    <form id="form" action="" method="get">
+        <div>
+            <label for="nome">Nome</label>
+            <br>
+            <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" >
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email" placeholder="Digite seu Email" >
+        </div>
+        <div>
+            <label for="telefone">Telefone</label>
+            <br>
+            <input type="tel" name="telefone" id="telefone" placeholder="Digite seu Telefone" >
+        </div>
+        <div>
+            <input onclick="mostrarDados()" type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
