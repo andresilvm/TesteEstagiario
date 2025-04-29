@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JB Gráfica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .error-space {
+      min-height: 1.25rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+
+  <section class="bg-gray-100 flex rounded-2xl shadow-lg py-14 max-w-3xl w-full">
+    <div class="w-full max-w-sm mx-auto">
+      <img src="img/logo_jb.png" alt="Logo da Gráfica JB" class="h-28 w-auto mx-auto" />
+
+      <form id="forms" class="flex flex-col mt-4">
+
+        <div class="flex flex-col">
+          <label for="name" class="text-sm font-medium text-gray-700">Nome:</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Digite seu nome completo" 
+            class="p-2 mt-1 rounded-xl border border-gray-300 placeholder:text-xs" 
+          />
+          <div class="error-space">
+            <div id="name-error" class="text-red-500 text-xs mt-1 hidden">Nome inválido. Use apenas letras e espaços.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label for="email" class="text-sm font-medium text-gray-700">Email:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="exemplo@email.com" 
+            class="p-2 mt-1 rounded-xl border border-gray-300 placeholder:text-xs" 
+          />
+          <div class="error-space">
+            <div id="email-error" class="text-red-500 text-xs mt-1 hidden">Email inválido. Digite um email no formato correto.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label for="phone" class="text-sm font-medium text-gray-700">Telefone:</label>
+          <input 
+            type="text" 
+            id="phone" 
+            name="phone" 
+            placeholder="(11) 91234-5678" 
+            class="p-2 mt-1 rounded-xl border border-gray-300 placeholder:text-xs" 
+          />
+          <div class="error-space">
+            <div id="phone-error" class="text-red-500 text-xs mt-1 hidden">Telefone inválido. Digite no formato (XX) XXXXX-XXXX.</div>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="bg-[#002D74] rounded-xl text-white py-2 hover:bg-[#001F4E] transition duration-200 ease-in-out"
+        >
+          Enviar
+        </button>
+        <div class="error-space">
+          <span id="form-error" class="text-red-500 hidden text-xs text-center block"></span>
+        </div>
+      </form>
+
+      <div id="sucess" class="hidden mt-4 text-green-600 font-semibold text-center">
+        <h2>Obrigado por seu cadastro!</h2>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

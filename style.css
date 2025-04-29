@@ -1,0 +1,11 @@
+.input-container {
+  position: relative;
+}
+.error-message {
+  min-height: 1rem;
+  display: block;
+  visibility: hidden;
+}
+.error-message.visible {
+  visibility: visible;
+}
